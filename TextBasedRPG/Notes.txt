@@ -1,0 +1,32 @@
+﻿// Objective: infiltrate, take out target.
+// Many different routes.
+// Based on blocks of time. Each level has a maximum time limit
+//      which can be extended based on player actions.
+// Each action takes a certain amount of time from 0 to n.
+// Player can undo their actions, which steps time back a corresponding number of blocks.
+// The player must explore the area to get info on how to complete the level and keep
+//      going back in time to get enough info to successfully complete the level.
+
+help <arg> // display information related to the "command" <arg>
+help // list all of the commands with a short description
+
+survey <subject> // display description of <area/room/building>
+describe <subject> // display description of <object>
+
+search <object> // display hidden information for <object> like clues, child objects
+// describe room -> search objects
+
+view/see <arg> 
+    -items -> display items in the inventory
+    -stats -> display stats
+
+open <object> // attempt to open object
+close <object> // attempt to close object
+take/grab/pickup <item> // attempt to add item to inventory
+
+use <item> in/on <target> // attempt to use an item on something
+use <item> // attempt to use an item
+
+jumpforward <n> // go forward in time n blocks, maintains position and inventory
+jumpback <n> // go back in time n blocks, maintains position and inventory
+
